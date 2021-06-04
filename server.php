@@ -2,11 +2,12 @@
 
 	session_start();
 
-		// Variablen initialisieren
+	// Variablen initialisieren
 		$title = "";
 		$note = "";
 		$id =0;
 		$edit_state = false;
+		
 	// Verbindung zur Datenbank herstellen
 	$db = mysqli_connect('localhost', 'root', '', 'notes');
 	
@@ -21,7 +22,8 @@
 	
 
 		$_SESSION['msg'] = "Note saved";
-	// Umleitung zur Indexseite nach dem Einfügen	
+		
+	// Umleitung zur Indexseite nach dem Einfügen
 		header('location: index.php'); 
 	}
 	
@@ -33,7 +35,7 @@
 			mysqli_query($db, "UPDATE info SET title = '$title', note = '$note' WHERE id = $id ");
 			$_SESSION['msg'] = "Note edited";
 			header('location: index.php');
-			}
+			}	
 			
 	// Datensätze löschen
 		if (isset($_GET['del'])) {
@@ -43,8 +45,7 @@
 			header('location: index.php');
 			
 		}
-	
-	
+		
 	// Datensätze abrufen
 	$results = mysqli_query($db, "SELECT * FROM info");
 ?>
