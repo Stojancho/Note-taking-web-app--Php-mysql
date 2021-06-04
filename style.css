@@ -44,7 +44,6 @@ input:hover {
 	background: #88BDBC;
 }
 
-
 form {
 	width: 45%;
 	margin: 50px auto;
@@ -53,8 +52,7 @@ form {
 	border: 1px solid #bbbbbb;
 	border-radius: 5px;
 	background: rgb(17, 45, 50, 0.8);
-	color: white;
-	
+	color: white;	
 }
 
 .glass {
@@ -95,8 +93,6 @@ form {
 	text-align: center;
     display: block;
     margin: 0 auto;
-
-
 }
 
 .edit_btn {
@@ -104,8 +100,7 @@ form {
     padding: 2px 5px;
     background: rgb(46, 139, 87, 0.9);
     color: white;
-    border-radius: 3px;
-	
+    border-radius: 3px;	
 }
 
 .del_btn {
